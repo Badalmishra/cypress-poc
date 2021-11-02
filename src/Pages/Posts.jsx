@@ -12,6 +12,9 @@ export const Posts = () => {
   const getPosts = async () => {
     setLoading(true);
     await delay(2000);
+    /**
+     * To pass the cypress test replace url with https://jsonplaceholder.typicode.com/posts
+     */
     const response = await fetch("https://jsonplaceholdersdsd");
     const data = await response.json();
     if(data){
